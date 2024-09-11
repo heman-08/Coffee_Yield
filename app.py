@@ -41,7 +41,7 @@ def predict():
             dtype=object)
         transform_features = scaler.transform(features)
         prediction = etr.predict(transform_features).reshape(-1, 1)
-
+        print(prediction[0][0])
         return render_template('index.html', prediction=prediction[0][0])
 
 
